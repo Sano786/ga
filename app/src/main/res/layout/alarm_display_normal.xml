@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <TextClock
+            android:id="@+id/normalAlarmDisp_currentTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:textColor="#757575"/>
+
+        <TextClock
+            android:id="@+id/normalAlarmDisp_currentDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:format12Hour=" EEEE, MMMM dd"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#757575"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Alarm"
+            android:textAllCaps="false"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/normalAlarmDisp_snoozeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/round_btn_red"
+            android:paddingBottom="15dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="15dp"
+            android:text="Snooze"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center|bottom">
+
+        <Button
+            android:id="@+id/normalAlarmDisp_stopAlarmBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:background="#FF5EB227"
+            android:gravity="center"
+            android:text="@string/stop_alarm_txt"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

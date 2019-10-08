@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/text_alarm_title_box_0"
+            android:background="@color/colorAccent"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/alarm_message"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="512dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/cre"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_stop_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="58dp"
+            android:layout_marginBottom="73dp"
+            android:onClick="playerOneButtonClicked"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp"
+            android:text="@string/stop_alarm_txt"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/colorAccent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:text="@string/alarm_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/text_alarm_message"
+            android:textSize="36sp"
+            android:textColor="@android:color/black"
+            android:textStyle="normal|bold" />
+    </RelativeLayout>
+</LinearLayout>

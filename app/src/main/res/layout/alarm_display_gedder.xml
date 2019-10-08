@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:orientation="vertical">
+
+        <!--<Space-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#E8EAF6" />-->
+
+        <TextClock
+            android:id="@+id/gedderAlarmDisp_currentTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:background="#E8EAF6"
+            android:textAlignment="center"
+            android:textColor="#757575"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextClock
+            android:id="@+id/gedderAlarmDisp_currentDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E8EAF6"
+            android:format12Hour=" EEEE, MMMM dd"
+            android:textAlignment="center"
+            android:textColor="#757575"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/gedderAlarmDisp_leaveByXminBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="searching"
+            android:textAlignment="center"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E8EAF6"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Go there Alarm"
+            android:textAllCaps="false"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Leave by:"
+            android:textAlignment="center"
+            android:textColor="#757575"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/gedderAlarmDisp_leaveByTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:textAlignment="center"
+            android:textColor="#757575"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="To get there by:"
+            android:textAlignment="center"
+            android:textColor="#757575"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/gedderAlarmDisp_getThereByTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:textAlignment="center"
+            android:textColor="#757575"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/gedderAlarmDisp_GoogleMapsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_btn_blue"
+            android:paddingBottom="15dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="15dp"
+            android:text="Google Maps"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/gedderAlarmDisp_stopAlarmBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_weight="0.333"
+            android:background="#FF5EB227"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/stop_alarm_txt"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle" />
+
+        <Space
+            android:layout_width="4dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/gedderAlarmDisp_snoozeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_weight="0.666"
+            android:background="@color/colorAccent"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="Snooze"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+
+</LinearLayout>

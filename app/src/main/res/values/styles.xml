@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--<style name="AppTheme.NoActionBar">-->
+    <!--<item name="windowActionBar">false</item>-->
+    <!--<item name="windowNoTitle">true</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Widget.Button.GedderToggle" parent="android:Widget">
+        <item name="android:background">@drawable/gd_toggle_bg</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+
+    <style name="Widget.Button.AlarmToggle" parent="android:Widget">
+        <item name="android:background">@drawable/alrm_toggle_bg</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+
+    <style name="gedderToggleButton"  parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:buttonStyleToggle">@style/Widget.Button.GedderToggle</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+    </style>
+
+    <style name="alarmToggleButton"  parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:buttonStyleToggle">@style/Widget.Button.AlarmToggle</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+    </style>
+
+</resources>

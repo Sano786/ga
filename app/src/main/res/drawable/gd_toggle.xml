@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item android:state_checked="false"-->
+        <!--android:drawable="@drawable/gedder_off" />-->
+
+    <!--<item android:state_checked="true"-->
+        <!--android:drawable="@drawable/gedder_on" />-->
+
+    <item android:state_checked="true"
+        android:id="@android:id/background">
+
+        <bitmap android:src="@drawable/gedder_on"
+            android:gravity="center" />
+    </item>
+
+    <item android:state_checked="false"
+        android:id="@android:id/background">
+
+        <bitmap android:src="@drawable/gedder_off"
+            android:gravity="center" />
+    </item>
+
+</selector>

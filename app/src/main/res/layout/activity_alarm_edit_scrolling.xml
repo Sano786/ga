@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#ffffff"
+    tools:context="com.gedder.gedderalarm.AddEditAlarmScrollingActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+
+            <TextView
+                android:id="@+id/editAlarm_CancelBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="cancel"
+                android:text="CANCEL"
+                android:textColor="#FFffffff"
+                android:background="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="2dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editAlarm_DoneBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="#FF5EB227"
+                android:gravity="center"
+                android:onClick="done"
+                android:text="DONE"
+                android:textColor="#FFffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="2dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="ADD ALARM"
+                    android:background="#E8EAF6"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="2dp"/>
+
+                <include layout="@layout/threshold_time_picker"
+                    android:id="@+id/editAlarm_ThresholdTimePicker"/>
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="10dp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/editAlarm_OriginAutoComplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Origin"
+                    android:inputType="text"/>
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="10dp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/editAlarm_DestinationAutoComplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Destination"
+                    android:inputType="text" />
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="10dp" />
+
+
+                <TextView
+                    android:id="@+id/editAlarm_ArrivalTimePickerMonologBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="?attr/editTextBackground"
+                    android:gravity="center_vertical"
+                    android:hint="Arrival Time"
+                    android:onClick="setArrivalTime"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:textColor="?attr/editTextColor" />
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="10dp" />
+
+                <EditText
+                    android:id="@+id/editAlarm_PrepTimeTextBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:inputType="time"
+                    android:hint='Prep Time (e.g. "30" for 30 minutes)'/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:id="@+id/transportation_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:text="Transportation Type:"
+                    android:onClick="setArrivalTime"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:textColor="?attr/editTextColor" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_weight=".5" />
+
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioButton1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="Mass Transit"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="Driving"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+
+                </RadioGroup>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
